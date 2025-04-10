@@ -4,6 +4,11 @@ import bat from './ass/images/Batman.jpeg';
 import flash from "./ass/images/Flash.webp";
 
 
+
+
+
+
+
 const Details = [
     {   
         id:1,

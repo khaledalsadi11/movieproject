@@ -1,9 +1,9 @@
 import React from "react";
-import Moviesdetails from "../moviesDetails";
 
 
 function movieCard(movie){
     return(
+        <div className="movies-container" >
         <div class="movie-card">
             <img src={movie.posterpath} alt="" className="movie-image"/>
             <div className="movie-info">
@@ -12,8 +12,7 @@ function movieCard(movie){
             </div>
         </div>
 
-
-
+        </div>
         
     );
 }
