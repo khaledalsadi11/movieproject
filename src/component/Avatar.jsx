@@ -1,9 +1,11 @@
 import React from "react";
+import "./Avatar.css"
 
 
-function Avatar() {
-    return <p className="logo">Movies</p>;
-  }
-  
+function Avatar({fetchData}){
+    return(
+        <p className="logo">Moveis </p>    
+    );
+}
 
 export default Avatar;

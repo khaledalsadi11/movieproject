@@ -1,0 +1,53 @@
+.movie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+  background-color: rgba(128, 128, 128, 0.73);
+  width: 100%;
+}
+
+.link {
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  margin-right: auto;
+}
+
+
+
+.movie .movie-title {
+  margin-top: 1rem;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+
+.movie .movie-image {
+  width: 400px;
+  height: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.movie .movie-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: rgb(43, 36, 30);
+  max-width: 600px;
+  text-align: center;
+  text-wrap: wrap;
+  font-weight: 600 ;
+  font-size: 1.2rem;
+ 
+}
+
+@media (min-width: 768px) {
+  .movie .movie-detail {
+    text-align: left;
+  }
+}

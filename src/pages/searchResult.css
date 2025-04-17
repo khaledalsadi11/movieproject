@@ -1,0 +1,17 @@
+.result{
+    color: white;
+    margin: 100px;
+  }
+
+  .back-btn{
+    height: 70px;
+    margin-right: 40px;
+    background-color: rgb(33, 33, 186);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    color: #f5f5f5;
+    outline: none;
+  
+  
+  
+  }

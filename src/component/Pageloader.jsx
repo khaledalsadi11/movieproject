@@ -1,4 +1,5 @@
 import React from "react";
+import "./pageLoader.css"
 
 function FullPageLoader() {
     return (
