@@ -10,7 +10,13 @@
     flex-wrap: wrap; 
   }
 
- 
+ .Fav-link{
+  font-size: 50px;
+  color: rgb(98, 98, 202);
+  text-decoration: none;
+  margin-top: 20px;
+  margin-right: 30px;
+ }
 
 
 

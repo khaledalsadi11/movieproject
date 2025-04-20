@@ -46,6 +46,14 @@
  
 }
 
+ .Fav-link-D{
+  display: flex;
+  text-decoration: none;
+  text-transform: none;
+  color: aqua;
+  margin-right: auto;
+}
+
 @media (min-width: 768px) {
   .movie .movie-detail {
     text-align: left;

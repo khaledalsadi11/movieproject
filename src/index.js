@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import MovieDetail from "./pages/MovieDetail";
 import Home from "./pages/Home"
 import SearchResults from './pages/searchResult';
+import FavoritesPage from "./pages/FavoritePage"
 
 
 const router = createBrowserRouter([
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: "search/:query",
         element: <SearchResults />
+      },{
+         path:"/favorites" ,
+         element:<FavoritesPage />
+
       }
     ]
   }

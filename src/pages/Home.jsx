@@ -63,27 +63,36 @@ const handleSearch = async (query) => {
     }, 1500);
   
 };
+
+
+console.log(movies);
     return (
       <div>
         <div className='header'>      
           <Avatar/>
         <Search onSearch={handleSearch} />
+        <Link className='Fav-link' to="/favorites">Favorites</Link>
+
   
         </div>
         {loading ? <PageLoader/> : <div className="movies-container">
           {movies.length > 0 ? (
             movies.map((movie) =>  
+              
             <MovieCard 
             key={movie.id}
             id={movie.id} 
             title={movie.title}
             overview={movie.overview}
             posterpath={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+            
           />)
           ) : (
             <PageLoader/>
           )}
         </div> }
+
+        
         
       </div>
     );
