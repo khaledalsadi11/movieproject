@@ -2,31 +2,13 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import MovieCard from "../component/MovieCard";
 import PageLoader from "../component/Pageloader";
-import "./searchResult.css"
+import "./searchResult.css";
+import { useSearch } from "../Hooks/useSearch";
 
 function SearchResults() {
   const { query } = useParams();
-  const [movies, setMovies] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchSearchResults = async () => {
-      try {
-        const res = await fetch(
-          `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API_KEY}&query=${encodeURIComponent(query)}`
-        );
-        const data = await res.json();
-        setMovies(data.results);
-      } catch (error) {
-        console.error("Search error:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchSearchResults();
-  }, [query]);
-
+  const {movies,loading}=useSearch(query);
+ 
   return (
     <div className="search-results">
       <h2 className="result">Search Results for: "{query}"</h2>

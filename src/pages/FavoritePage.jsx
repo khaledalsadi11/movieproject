@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import MovieCard from '../component/MovieCard';
 import { FavoritesContext } from '../component/Favoraties';
+import FavoriteButton from '../component/FavButton';
 
 const FavoritePage = () => {
   const { favorites } = useContext(FavoritesContext);
@@ -20,6 +21,7 @@ const FavoritePage = () => {
       /> 
       ))}
     </div>
+
 
     </div>
   );

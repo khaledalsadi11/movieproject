@@ -3,38 +3,18 @@ import { useState, useEffect } from 'react';
 import "./MovieDetail.css";
 import { useContext } from 'react';
 import FavoriteButton from '../component/FavButton';
+import { useFetch } from '../Hooks/useFetch';
 
 
 function MovieDetail() {
   const { movieId } = useParams();
-  const [movie, setMovie] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const fetchMovie = async () => {
-      const url = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${process.env.REACT_APP_API_KEY}`;
-      console.log(url);
-
-      try {
-        const res = await fetch(url);
-        if (!res.ok) throw new Error('Failed to fetch movie details');
-        const data = await res.json();
-        setMovie(data);
-      } catch (e) {
-        setError(e.message);
-      } 
-        setLoading(false);
-      
-    };
-
-    fetchMovie();
-  }, [movieId]);
-
+  const {error, loading, movie} = useFetch(movieId);
+  
   if (loading) 
     return <p>Loading...</p>;
   if (error) 
     return <p>{error}</p>;
+
 
 
  

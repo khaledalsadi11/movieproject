@@ -5,45 +5,15 @@ import Search from "../component/Search";
 import PageLoader from "../component/Pageloader";
 import { Link } from 'react-router-dom';
 import "./Home.css";
-
-
-
-
-
+import { useData } from '../Hooks/useData';
 
 
 function Home() {
-const [movies, setMovies] = useState([]);
-const [isSearching, setIsSearching] = useState(false);
-const [loading, setLoading] = useState(false); 
-
 
 const URL = `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_KEY}`;
-console.log(URL);
-
-const fetchData = async () => {
-  setLoading(true);
-
-  try {
-    const response = await fetch(URL);
-    const data = await response.json();
-    setMovies(data.results);
-    setIsSearching(false);
-  } catch (error) {
-    console.error("Error fetching data:", error);
-  } 
-  setTimeout(() => {
-      setLoading(false);
-    }, 1500);
-    
-  
-};
 
 
-useEffect(() => {
-  fetchData();
-}, []);
-
+const {movies,isSearching,loading,setMovies,setIsSearching,setLoading}=useData(URL);
 
 
 const handleSearch = async (query) => {
@@ -65,7 +35,6 @@ const handleSearch = async (query) => {
 };
 
 
-console.log(movies);
     return (
       <div>
         <div className='header'>      
@@ -73,8 +42,9 @@ console.log(movies);
         <Search onSearch={handleSearch} />
         <Link className='Fav-link' to="/favorites">Favorites</Link>
 
-  
         </div>
+
+
         {loading ? <PageLoader/> : <div className="movies-container">
           {movies.length > 0 ? (
             movies.map((movie) =>  
