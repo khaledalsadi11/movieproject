@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 
   
   export function useHandleSearch(){
-    const [movies, setMovies] = useState([]);
-    const [isSearching, setIsSearching] = useState(false);
-    const [loading, setLoading] = useState(false);
+    const [moviess, setMovies] = useState([]);
+    const [isSearchings, setIsSearching] = useState(false);
+    const [loadings, setLoading] = useState(false);
 
   
       const handleSearch = async (query) => {
@@ -26,5 +26,5 @@ import React, { useEffect, useState } from 'react';
       };
 
 
-    return {movies,isSearching,loading};
+    return {handleSearch};
 }

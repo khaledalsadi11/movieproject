@@ -6,33 +6,15 @@ import PageLoader from "../component/Pageloader";
 import { Link } from 'react-router-dom';
 import "./Home.css";
 import { useData } from '../Hooks/useData';
+import { useHandleSearch } from '../Hooks/useHandleSearch';
 
 
 function Home() {
 
 const URL = `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_KEY}`;
 
-
-const {movies,isSearching,loading,setMovies,setIsSearching,setLoading}=useData(URL);
-
-
-const handleSearch = async (query) => {
-  setLoading(true);
-  try {
-    const res = await fetch(
-      `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API_KEY}&query=${encodeURIComponent(query)}`
-    );
-    const data = await res.json();
-    setMovies(data.results);
-    setIsSearching(true);
-  } catch (error) {
-    console.error("Error searching:", error);
-  } 
-    setTimeout(() => {
-      setLoading(false);
-    }, 1500);
-  
-};
+const {movies,loading}=useData(URL);
+const {handleSearch}=useHandleSearch();
 
 
     return (

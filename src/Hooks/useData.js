@@ -31,5 +31,5 @@ import React, { useEffect, useState } from 'react';
 
       
 
-    return {movies,isSearching,loading,setMovies,setIsSearching,setLoading};
+    return {movies,loading};
 }
