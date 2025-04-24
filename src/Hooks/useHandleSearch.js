@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 
   
   export function useHandleSearch(){
+    
     const [moviess, setMovies] = useState([]);
     const [isSearchings, setIsSearching] = useState(false);
     const [loadings, setLoading] = useState(false);

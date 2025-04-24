@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import MovieCard from '../component/MovieCard';
 import { FavoritesContext } from '../component/Favoraties';
 import FavoriteButton from '../component/FavButton';
+import "./FavoritePage.css";
 
 const FavoritePage = () => {
   const { favorites } = useContext(FavoritesContext);
@@ -9,8 +10,9 @@ const FavoritePage = () => {
   if (favorites.length === 0) return <p>No favorite movies yet.</p>;
 
   return (
-    <div><h1 style={{color:"white",margin:"50px"}}>Favoraties</h1>
-    <div className="movies-container">
+    <div className='Fav-container'>
+    <h1 style={{color:"white",margin:"50px"}}>Favoraties</h1>
+    <div className="movies-container-Fav">
       {favorites.map((movie) => (
         <MovieCard 
         key={movie.id}

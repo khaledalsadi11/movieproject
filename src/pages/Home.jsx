@@ -11,10 +11,10 @@ import { useHandleSearch } from '../Hooks/useHandleSearch';
 
 function Home() {
 
-const URL = `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_KEY}`;
+    const URL = `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_KEY}`;
 
-const {movies,loading}=useData(URL);
-const {handleSearch}=useHandleSearch();
+    const {movies,loading}=useData(URL);
+    const {handleSearch}=useHandleSearch();
 
 
     return (

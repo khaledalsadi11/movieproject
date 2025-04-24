@@ -1,0 +1,12 @@
+.movies-container-Fav{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: left;
+    margin-left: 30px;
+    
+  }
+
+ 
+  
