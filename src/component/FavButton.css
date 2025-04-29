@@ -3,4 +3,12 @@
     font-size: 30px;
     color: aliceblue;
     border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+}
+
+.Fav-btn:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+      
 }

@@ -6,20 +6,20 @@ import { FavoritesProvider } from './component/Favoraties';
 import { useLocation } from 'react-router-dom';
 
 function App() {
-  const location = useLocation();
+  // const location = useLocation();
 
-  const getBackgroundColor = () => {
-    if (location.pathname  === '/') return 'gray';
-    if (location.pathname.startsWith('/movie')) return 'lightcoral';
-    if (location.pathname.startsWith('/search')) return 'lightblue';
-    if (location.pathname === '/favorites') return 'lightblue';
-  };
+  // const getBackgroundColor = () => {
+  //   if (location.pathname  === '/') return 'gray';
+  //   if (location.pathname.startsWith('/movie')) return 'lightcoral';
+  //   if (location.pathname.startsWith('/search')) return 'lightblue';
+  //   if (location.pathname === '/favorites') return 'lightblue';
+  // };
 
   return (
     <FavoritesProvider>
-      <div style={{ backgroundColor: getBackgroundColor(), minHeight: '100vh', padding: '20px' }}>
+      {/* <div style={{ backgroundColor: getBackgroundColor(), minHeight: '100vh'}}> */}
         <Outlet />
-      </div>
+      {/* </div> */}
     </FavoritesProvider>
   );
 }
