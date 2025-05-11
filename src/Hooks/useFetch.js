@@ -5,6 +5,7 @@ export function useFetch(movieId) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+
   const url = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${process.env.REACT_APP_API_KEY}`;
   const fetchMovie = useCallback(async (url) => {
     setLoading(true);
@@ -20,9 +21,13 @@ export function useFetch(movieId) {
     }
   }, []);
 
+
   useEffect(() => {
     fetchMovie(url);
   }, [url]);
 
   return { movie, loading, error };
 }
+
+
+

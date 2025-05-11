@@ -4,13 +4,21 @@ import MovieCard from "../component/MovieCard";
 import PageLoader from "../component/Pageloader";
 import "./searchResult.css";
 import { useSearch } from "../Hooks/useSearch";
+import InfiniteScroll from "react-infinite-scroll-component";
 
 function SearchResults() {
   const { query } = useParams();
-  const {movies,loading}=useSearch(query);
+  const {movies,loading,fetchSearchResults,hasMore}=useSearch(query);
  
   return (
     <div className="search-results">
+      <InfiniteScroll
+        dataLength={movies.length}
+        next={fetchSearchResults}
+        hasMore={hasMore}
+        loader={<PageLoader  />}
+        ß 
+      >
       <h2 className="result">Search Results for: "{query}"</h2>
       {loading ? (
         <PageLoader />
@@ -31,6 +39,7 @@ function SearchResults() {
           )}
         </div>
       )}
+      </InfiniteScroll>
     </div>
   );
 }

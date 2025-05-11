@@ -15,8 +15,10 @@ function Search({onSearch}) {
         e.preventDefault();
         onSearch(inputRef.current.value);
         const query = inputRef.current.value.trim();
-    if (query) {
-      navigate(`/search/${encodeURIComponent(query)}`);}
+    if (query) 
+      {
+      navigate(`/search/${encodeURIComponent(query)}`);
+    }
       }}>
         <input ref={inputRef} className="search" type="search" />
         <button className="Search_btn" type="submit">

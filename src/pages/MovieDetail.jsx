@@ -5,7 +5,6 @@ import { useContext } from 'react';
 import FavoriteButton from '../component/FavButton';
 import { useFetch } from '../Hooks/useFetch';
 
-
 function MovieDetail() {
   const { movieId } = useParams();
   const {error, loading, movie} = useFetch(movieId);
@@ -34,6 +33,12 @@ function MovieDetail() {
       </div>
 
       <FavoriteButton movie={movie} />
+
+
+
+
+
+
      
 
     </div>
