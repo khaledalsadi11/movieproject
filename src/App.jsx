@@ -4,6 +4,9 @@ import Avatar from "./component/Avatar";
 import Search from "./component/Search";
 import { FavoritesProvider } from './component/Favoraties';
 import { useLocation } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { store } from './store/store';
+import ErrorBoundries from "./component/ErrorBoundries";
 
 function App() {
   // const location = useLocation();
@@ -16,11 +19,15 @@ function App() {
   // };
 
   return (
+    <ErrorBoundries word= "Hi">
+    <Provider store={store}>
     <FavoritesProvider>
       {/* <div style={{ backgroundColor: getBackgroundColor(), minHeight: '100vh'}}> */}
         <Outlet />
       {/* </div> */}
     </FavoritesProvider>
+    </Provider>
+    </ErrorBoundries>
   );
 }
 

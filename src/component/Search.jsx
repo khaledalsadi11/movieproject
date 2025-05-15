@@ -22,7 +22,7 @@ function Search({onSearch}) {
       }}>
         <input ref={inputRef} className="search" type="search" />
         <button className="Search_btn" type="submit">
-          <i class="fa fa-search"></i>
+          <i className="fa fa-search"></i>
         </button>
       </form>
     </div>
