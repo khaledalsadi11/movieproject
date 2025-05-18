@@ -27,7 +27,7 @@ function Home() {
     dispatch(getMovies(currentPage + 1));
   };
 
-throw new Error("Error");
+// throw new Error("Error");
 
   return (
     <div>
@@ -53,7 +53,7 @@ throw new Error("Error");
   <MovieCard
     key={`${movie.id}-${index}`}
     id={movie.id}
-    title={movie.tile}
+    title={movie.title}
     overview={movie.overview}
     posterpath={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
   />

@@ -18,6 +18,10 @@ import React,{Component} from "react";
 
     };
 
+    resetError = () => {
+    this.setState({ hasError: false });
+  };
+
    
 
 
@@ -26,6 +30,10 @@ import React,{Component} from "react";
 
             return (<div>
                 <p style={{fontSize:"60px"}}>An Error was Detected !</p>
+                          <button onClick={this.resetError} style={{ fontSize: "20px" }}>
+                             Retry !
+          </                button>
+
                 </div>);
            
             
