@@ -10,9 +10,9 @@ import { useHandleSearch } from '../Hooks/useHandleSearch';
 import { useDispatch, useSelector } from 'react-redux';
 import { getMovies } from '../store/moviesSlice';
 import ErrorBoundries from '../component/ErrorBoundries';
+import { NavBar } from '../component/navBar';
 
 function Home() {
-  const { handleSearch } = useHandleSearch();
   const dispatch = useDispatch();
   const { movies, loading, currentPage, hasMore } = useSelector((state) => state.movies);
 
@@ -31,12 +31,9 @@ function Home() {
 
   return (
     <div>
-      <div className='header'>
 
-        <Avatar/>
-        <Search onSearch={handleSearch} />
-        <Link className='Fav-link' to="/favorites">Favorites</Link>
-      </div>
+      <NavBar/>
+     
       
       <InfiniteScroll
         dataLength={movies.length}

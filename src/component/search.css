@@ -7,7 +7,7 @@
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     border-radius: 30px 0 0 30px;
     outline-offset: 1px;
-    outline-color: rgb(20, 20, 215);
+    outline-color: black;
   }
   
   .Search_bar {
@@ -28,7 +28,7 @@
     margin: 0;
     transition: transform 0.3s ease;
     font-size: 20px;
-    background-color: rgb(67, 41, 218);
+    background-color: black;
     color: white;
   
     

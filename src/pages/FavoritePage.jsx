@@ -9,11 +9,11 @@ const FavoritePage = () => {
   const { favorites } = useContext(FavoritesContext);
   
 
-  if (favorites.length === 0) return <p>No favorite movies yet.</p>;
+  if (favorites.length === 0) return <p data-testid="test">No favorite movies yet.</p>;
 
   return (
     <div className='Fav-container'>
-    <h1 style={{color:"white",margin:"50px"}}>Favoraties</h1>
+    <h1 style={{color:"black",margin:"50px"}}>Favoraties</h1>
     <div className="movies-container-Fav">
       {favorites.map((movie) => (
         <MovieCard 

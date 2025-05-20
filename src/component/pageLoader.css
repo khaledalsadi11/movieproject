@@ -6,14 +6,14 @@
     height: 100vh;
     font-size: 1.5rem;
     color: #333;
-    background-color: gray;
+    background-color: white;
   }
   
   .spinner {
     width: 60px;
     height: 60px;
     border: 8px solid #ccc;
-    border-top: 8px solid #2196f3;
+    border-top: 8px solid black;
     border-radius: 50%;
     animation: spin 2s linear infinite;
     margin-bottom: 1rem;
